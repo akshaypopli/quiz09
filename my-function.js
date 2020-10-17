@@ -8,7 +8,7 @@ app.get('/say/:key',(req,res)=>{
 
     axios.get('https://hhq4a8aycd.execute-api.us-east-2.amazonaws.com/newLive/say')
     .then(function (response) {
-        let res1=response.data+" "+req.params.key;
+        let res1=response.data+" "+req.query.key;
         res.send(res1);
     })
     .catch(function (error) {
